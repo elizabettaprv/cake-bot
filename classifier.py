@@ -40,6 +40,3 @@ def classify(message):
     return None
    
 
-print(classify("Можно торт без орехов на субботу?"))
-print(classify("Хочу торт с орехами на субботу"))
-print(classify("Подскажите, сколько ехать до Валенсии?"))
