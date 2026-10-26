@@ -7,7 +7,7 @@ client = anthropic.Anthropic()       # клиент сам находит клю
 
 # Промпт храним в файле, а не в коде: менять его можно без правки Python.
 # encoding="utf-8" обязателен на Windows, иначе кириллица превратится в кашу.
-with open("prompts/classifier_v1.txt", encoding="utf-8") as f:
+with open("prompts/classifier_v2.txt", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
 
 LABELS = ["risk", "order", "facts", "general", "other"]   # пять меток из спецификации
