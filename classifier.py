@@ -7,14 +7,17 @@ client = anthropic.Anthropic()       # клиент сам находит клю
 
 # Промпт храним в файле, а не в коде: менять его можно без правки Python.
 # encoding="utf-8" обязателен на Windows, иначе кириллица превратится в кашу.
-with open("prompts/classifier_v2.txt", encoding="utf-8") as f:
+PROMPT_FILE = "prompts/classifier_v2.txt"   # какой промпт читаем
+MODEL = "claude-haiku-5-5"                  # какой моделью классифицируем
+
+with open(PROMPT_FILE, encoding="utf-8") as f:   # путь берём из константы
     SYSTEM_PROMPT = f.read()
 
 LABELS = ["risk", "order", "facts", "general", "other"]   # пять меток из спецификации
 
 def classify(message):
     response = client.messages.create(
-        model="claude-haiku-5-5",
+        model=MODEL,
         max_tokens=1000,                 # с запасом: размышление тоже сюда входит
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": message}],
