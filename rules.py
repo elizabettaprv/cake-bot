@@ -7,13 +7,13 @@ def detect_rule_intent(message):
         return "stop"
     return None  
 
-
-print(detect_rule_intent("торты без глютена?"))                        # risk
-print(detect_rule_intent("сыпь после эклера, что в креме?"))           # risk
-print(detect_rule_intent("хочу заказать торт без орехов на субботу"))  # risk
-print(detect_rule_intent("хочу медовик, аллергия на фундук"))          # risk
-print(detect_rule_intent("у вас свой рецепт крема, с орехами?"))       # risk
-print(detect_rule_intent("у ребёнка алергия на молоко — в чём можно заказать торт?"))  # risk
-print(detect_rule_intent("А в медовике есть ОРЕХИ?"))                  # risk
-print(detect_rule_intent("У меня непереносимость меда, можно торт?"))  # risk
-print(detect_rule_intent("У меня аллергия, передумал заказывать?"))    # risk
+if __name__ == "__main__":   # проверки ниже — только при прямом запуске rules.py
+    print(detect_rule_intent("торты без глютена?"))                        # risk
+    print(detect_rule_intent("сыпь после эклера, что в креме?"))           # risk
+    print(detect_rule_intent("хочу заказать торт без орехов на субботу"))  # risk
+    print(detect_rule_intent("хочу медовик, аллергия на фундук"))          # risk
+    print(detect_rule_intent("у вас свой рецепт крема, с орехами?"))       # risk
+    print(detect_rule_intent("у ребёнка алергия на молоко — в чём можно заказать торт?"))  # risk
+    print(detect_rule_intent("А в медовике есть ОРЕХИ?"))                  # risk
+    print(detect_rule_intent("У меня непереносимость меда, можно торт?"))  # risk
+    print(detect_rule_intent("У меня аллергия, передумал заказывать?"))    # risk
